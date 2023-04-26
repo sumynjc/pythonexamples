@@ -1,1 +1,1 @@
-# pythonexamples
+# Study project
