@@ -26,6 +26,6 @@ lines = [l.split() for l in data]
 name, day, month = 0,1,2
 for line in lines:
     key, val = line[month], line[name]
-    d[key] = val if key not in d else f'{d[key]} {val}'
+    d.setdefault(key, []).append(val)
 
-[print("No data" if m not in d else f"{d[m]}") for m in months]
+[print(*d.get(m,['No data'])) for m in months]
