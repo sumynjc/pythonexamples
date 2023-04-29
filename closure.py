@@ -1,8 +1,8 @@
 def create_accumulator(a=0):
-    total = 0
-    def inner(a):
+    total = a
+    def inner(x):
         nonlocal total
-        total +=a
+        total +=x
         return total
 
     return inner
